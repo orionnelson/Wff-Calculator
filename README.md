@@ -1,7 +1,7 @@
 # Wff-Calculator
 Turns a Properly constructed regex equation into a WFF
 
-Note the folowing is not being considered a WFF
+Note the following is not being considered a WFF
 (pνqΛp) 
 The script does not know if you mean ((pνq)Λp) or (pν(qΛp)) and will probably throw an exception 
 
