@@ -11,7 +11,8 @@ Possible Updates:
 
 Notes:
 Why does the output contain ¬12  in the index number of called operations?
-    * If the number is greater then four digits the negation is carried over to save space say you were to write this out by hand. 
+    * If the number is greater then four digits the negation is carried 
+    over to save space say you were to write this out by hand. 
  
 Why does the program keep crashing?
 The program Is made for wff and if your entry was not a wff I did not include a Try Catch block. 
