@@ -2,7 +2,7 @@ import random
 print("Your List of Symbols is :\n ¬[1]\n Λ[2]\n ν[3]\n →[4]")
 current_formula = input("Enter formula including elements :").strip()
 letter=""
-
+folen = len(current_formula)
 class WffTest(object):
     def split2(word): 
             return [char for char in word]
@@ -36,7 +36,7 @@ class WffTest(object):
         def cc(string,final):
                 result = ""
                 add = ""
-                space = 35
+                space = 8 + folen
                 dif = len(string)
     
             
