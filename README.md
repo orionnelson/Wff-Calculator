@@ -21,6 +21,14 @@ Examples of WFF:
 *(((pΛ((¬p)νq))Λ(s→r))Λ((¬s)→s))
 *((pνq)Λp)
 *((a4b)2((1a)4b))  ** Inputed in the num conversion formula. 
+*(((a3b)2((1c)2b))4((c4d)2((1a)4d))) try this
 
+
+
+
+
+BUGS: 
+Leaving the Final Value to be a Negation or Have a negation formula greater then 4 will give errors.
+This Does work However I have not been able to get the initial negation to work (1(a2b)) 
 ````
 
