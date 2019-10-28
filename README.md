@@ -28,7 +28,7 @@ Examples of WFF:
 
 
 BUGS: 
-Leaving the Final Value to be a Negation or Have a negation formula greater then 4 will give errors.
+Leaving the Final Value to be a Negation or Have a negation formula greater then may give errors.
 This Does work However I have not been able to get the initial negation to work (1(a2b)) 
 ````
 
