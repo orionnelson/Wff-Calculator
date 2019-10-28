@@ -75,9 +75,9 @@ class WffTest(object):
                     for l in string:
                         if( l in ("Λ","→","ν")):
                             j = string.find(l)
-                    add= " "*(space-dif) + " O"+string[j]+" on " + string[1:j] + " and " + string[j+1:len(string)-1]
-                    sarray.append(add)
-                    rarray.append(cstring)
+                            add= " "*(space-dif) + " O"+string[j]+" on " + string[1:j] + " and " + string[j+1:len(string)-1]
+                            sarray.append(add)
+                            rarray.append(cstring)
                 for z in range(0,len(rarray)):
                     result = result+"\n"+ str(z+1)+". "+str(rarray[z]) +" "+ str(sarray[z])# returned line by line to be compiled
                 if final==1:
@@ -227,15 +227,17 @@ letpos = ans[0]
 count = ans[1]
 proven = ans[2]
 result = ""
-if(count==0 and proven==True):
-    result = WffTest.run_const(entry,letpos)
-    #print(result)
-else:
-    raise Exception('The lb / rb must be equal and wff tests should run the value of proven and count were: {}'.format(proven)+' and {}'.format(count))
+try:
+    if(count==0 and proven==True):
+        result = WffTest.run_const(entry,letpos)
+        #print(result)
+    else:
+        raise Exception('The lb / rb must be equal and wff tests should run the value of proven and count were: {}'.format(proven)+' and {}'.format(count)+' Left brackets more then Right Brackets')
     
-#letpos = Dict with the letter position in the string
-    
-
+    #letpos = Dict with the letter position in the string
+except Exception as e:
+      print(str(e))   
+        
 input("hit any to exit")
     
 
