@@ -21,7 +21,7 @@ Examples of WFF:
 *(((pΛ((¬p)νq))Λ(s→r))Λ((¬s)→s))
 *((pνq)Λp)
 *((a4b)2((1a)4b))  ** Inputed in the num conversion formula. 
-*(((a3b)2((1c)2b))4((c4d)2((1a)4d))) try this
+*(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))) try this
 
 
 
