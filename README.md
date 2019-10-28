@@ -4,7 +4,8 @@
 
 Note the following is not being considered a WFF
 (pνqΛp) 
-The script does not know if you mean ((pνq)Λp) or (pν(qΛp)) and will probably just do both if exceptions are disabled or throw an exception as it is not in propper bracket notation WFF. Note Some textbooks use these types of functions and assume left to right progression. May add this as a default but am busy and will take some planning.
+The script does not know if you mean ((pνq)Λp) or (pν(qΛp)) and will probably just do both if exceptions are disabled or throw an exception as it is not in propper bracket notation WFF. 
+Note Some textbooks use these types of functions and assume left to right progression. May add this as a default but am busy and will take some planning.
 
 Possible Updates:
 * Adding a truth value table and method to tell if the entry is well formed before computing the construction sequence.
