@@ -36,7 +36,7 @@ class WffTest(object):
         def cc(string,final):
                 result = ""
                 add = ""
-                space = 8 + folen
+                space = 2 + folen
                 dif = len(string)
     
             
