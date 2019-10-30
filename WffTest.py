@@ -34,6 +34,7 @@ class WffTest(object):
 
         # cc takes the items in order of least complex to most complex and creates the construction sequence.
         def cc(string,final):
+                #print(string + str(final))
                 result = ""
                 add = ""
                 space = 2 + folen
@@ -44,18 +45,8 @@ class WffTest(object):
                     rarray.append(string)
                     add = " "*(space-dif)+ " is the base case variable."
                     sarray.append(add)
-            #(¬a) or ¬a or ¬a)
-                elif((("¬") in string) and (len(string)in(2,3,4))):
-                  for x in string:
-                     if x in string and x not in("¬","(",")"):
-                        i = string.find(x)
-                        v = string[i]
-                        add = " "*(space-dif)+ " O¬ on " + str(rarray.index(v)+1)
-                        rarray.append("(¬"+v+")")
-                        sarray.append(add)
-
             #(a→b) or ((¬a)→(¬b)) or ((a→b)Λ((¬a)→b)) or if you messed up a→b) tho make sure** not 
-                elif((('→') in string) or (('Λ') in string) or (('ν') in string) and (len(string)>4)):
+                elif((('→') in string) or (('Λ') in string) or (('ν') in string) and (len(string)>4)and string[1]!="¬"):
                 #replace the items with their index
                     cstring = string
                     for x in range((len(rarray))-1,-1,-1):
@@ -78,12 +69,28 @@ class WffTest(object):
                             add= " "*(space-dif) + " O"+string[j]+" on " + string[1:j] + " and " + string[j+1:len(string)-1]
                             sarray.append(add)
                             rarray.append(cstring)
+                #(¬a) or ¬a or ¬a)
+                elif(("¬") in string):
+                  added=False
+                  #print(string + " Called")
+                  for x in string:
+                     if x in string and x in("¬") and string.find(x)==1 and added==False:
+                        i = string.find(x)
+                        v = string[i+1:len(string)-1]
+                        add = " "*(space-dif)+ " O¬ on " + str(rarray.index(v)+1)
+                        rarray.append("(¬"+v+")")
+                        sarray.append(add)
+                        added=True
+
+
+
+
                 for z in range(0,len(rarray)):
                     result = result+"\n"+ str(z+1)+". "+str(rarray[z]) +" "+ str(sarray[z])# returned line by line to be compiled
                 if final==1:
                     return result
                 else:
-                    return "."
+                    return ""
         
         def search(entry, pos, sign):
           h=0
@@ -127,7 +134,7 @@ class WffTest(object):
                 edt = entry[pos-1]+edt + entry[y];
                 return edt[::-1]
         for item in k.keys():
-            print(cc(item,0))    
+            cc(item,0)    
         for x in range(0,len(entry)):
           if(entry[x] in ('Λ','ν','→')):
             res = str(search(entry,x,'-')) + str(entry[x])+ str(search(entry,x,'+'))
@@ -140,7 +147,7 @@ class WffTest(object):
                 resu.append(res)
         for x in range(0,len(resu)):
             if(x!=len(resu)-1):
-                print(cc(resu[x],0))
+                cc(resu[x],0)
             else:
                 print(cc(resu[x],1))
                 
@@ -181,7 +188,7 @@ class WffTest(object):
                     return True
                 else:
                     #print(str(lscount)+ " != " + str(vcount+ncount-1))
-                    return True
+                    return False
             
 
         # our function starts by finding the deepest part of the array array and then finding the functions at that depth
@@ -227,6 +234,8 @@ letpos = ans[0]
 count = ans[1]
 proven = ans[2]
 result = ""
+print("")
+print("  Contruction Sequence Of : " + entry)
 try:
     if(count==0 and proven==True):
         result = WffTest.run_const(entry,letpos)
@@ -236,8 +245,8 @@ try:
     
     #letpos = Dict with the letter position in the string
 except Exception as e:
-      print(str(e))   
-        
+      print(str(e))    
+
 input("hit any to exit")
     
 
