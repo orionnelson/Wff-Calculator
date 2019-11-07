@@ -34,7 +34,7 @@ Note At This Point the size of the equation is larger then the cmd or python she
 
 
 BUGS: 
-Leaving the Final Value to be a Negation or Have a negation formula greater then may give errors.
+Leaving the Final operation to be a Negation may give errors.
 This Does work However I have not been able to get the initial negation to work (1(a2b)) 
 ````
 
