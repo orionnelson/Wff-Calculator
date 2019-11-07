@@ -14,9 +14,6 @@ Notes:
 Why does the output contain ¬12  in the index number of called operations?
     * If the number is greater then four digits the negation is carried 
     over to save space say you were to write this out by hand. 
- 
-Why does the program keep crashing?
-The program Is made for wff and if your entry was not a wff I did not include a Try Catch block. 
 
 Examples of WFF:
 *(((pΛ((¬p)νq))Λ(s→r))Λ((¬s)→s))
@@ -34,7 +31,7 @@ Note At This Point the size of the equation is larger then the cmd or python she
 
 
 BUGS: 
-Leaving the Final operation to be a Negation may give errors.
-This Does work However I have not been able to get the initial negation to work (1(a2b)) 
+Leaving the final operation to be a negation may give errors.
+This does work however I have not been able to get the initial negation to work (1(a2b)) 
 ````
 
