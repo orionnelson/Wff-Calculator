@@ -1,4 +1,3 @@
-import random
 print("Your List of Symbols is :\n ¬[1]\n Λ[2]\n ν[3]\n →[4]")
 current_formula = input("Enter formula including elements :").strip()
 letter=""
@@ -81,6 +80,7 @@ class WffTest(object):
                         rarray.append("(¬"+v+")")
                         sarray.append(add)
                         added=True
+                     
 
 
 
@@ -145,6 +145,7 @@ class WffTest(object):
             res =  '(' + entry[x] + search(entry,x,'+')
             if res not in resu:
                 resu.append(res)
+                resu.sort(key=len)
         for x in range(0,len(resu)):
             if(x!=len(resu)-1):
                 cc(resu[x],0)
