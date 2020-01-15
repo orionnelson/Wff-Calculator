@@ -1,6 +1,10 @@
 # Wff-Calculator
 ````Turns a Properly constructed regex equation into a WFF Constuction Sequence
 
+*****************************************************************
+                    REQUIRES PYTHON 3 
+*****************************************************************
+
 
 Note the following is not being considered a WFF
 (pνqΛp) 
@@ -20,7 +24,7 @@ Examples of WFF:
 *(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))) try this
 
 
-How Do I Know You Diddn't HardCode Those Examples? Try any combination of WFFs by replacing variables of a wff with other wff's  My Favorite is: 
+How Do I Know You Did not HardCode Those Examples? Try any combination of WFFs by replacing variables of a wff with other wff's  My Favorite is: 
 
 (((1((((pΛ((¬p)νq))Λ((((1(a3b))2((1c)2b))4((c4d)2((1a)4d)))→r))Λ((¬(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))))→(((1(a3b))2((1c)2b))4((c4d)2((1a)4d)))))3((pνq)Λp)))2((1c)2((pνq)Λp)))4((c4d)2((1(((pΛ((¬p)νq))Λ((((1(a3b))2((1c)2b))4((c4d)2((1a)4d)))→r))Λ((¬(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))))→(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))))))4d)))
 
