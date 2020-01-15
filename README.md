@@ -9,11 +9,9 @@ Note Some textbooks use these types of functions and assume left to right progre
 
 Possible Updates:
 * Adding a truth value table and method to tell if the entry is well formed before computing the construction sequence.
+^^ Did That ;)
 
 Notes:
-Why does the output contain ¬12  in the index number of called operations?
-    * If the number is greater then four digits the negation is carried 
-    over to save space say you were to write this out by hand. 
 
 Examples of WFF:
 *(((pΛ((¬p)νq))Λ(s→r))Λ((¬s)→s))
@@ -30,8 +28,7 @@ Note At This Point the size of the equation is larger then the cmd or python she
 
 
 
-BUGS: 
-Leaving the final operation to be a negation may give errors.
-This does work however I have not been able to get the initial negation to work (1(a2b)) 
+Future
+May add (¬¬p) since most people count it as well formed 
 ````
 
