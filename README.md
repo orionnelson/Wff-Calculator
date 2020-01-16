@@ -37,12 +37,12 @@ Instead please resort to (¬(¬a)).
 ## Usage of the  Program
 The following symbols are used in the program to denote the functions of the adequate set (¬,Λ,ν, →)
 The formula will accept either the number or these symbols themselves.
-
+````
 ` 1 =  ¬ ` negation.
  `2 = Λ ` and.
  `3 = ν ` or.
  `4 = → ` implies.
- 
+ ````
 ## Examples of formulas to try.
 ````
 Examples of WFF:
