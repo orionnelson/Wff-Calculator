@@ -20,7 +20,7 @@ Turns a Properly constructed regex equation into a WFF Constuction Sequence and 
 *****************************************************************
 ````
 The symbols used in this program will only work with Python 3 
-and above you can download Python from  
+and above, you can download Python from  
 [Python Download Page](https://www.python.org/downloads/)
 ````
 To understand how this program works consider the example : (pνqΛp). 
@@ -29,7 +29,7 @@ The script does not know if you mean ((pνq)Λp) or (pν(qΛp))
 and will probably just do both if exceptions are disabled or 
 throw an exception as it is not in propper bracket notation WFF. 
 
-Note Some textbooks use these types of functions and assume 
+Note: Some textbooks use these types of functions and assume 
 left to right progression for the same symbols most commonly (¬¬a).
 At this point in time this method is unsupported but may include in the future. 
 Instead please resort to (¬(¬a)).
