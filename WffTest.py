@@ -110,12 +110,7 @@ def run():
                     characters[y]=symbol_array[int(characters[y])-1]
             returned = ''.join(characters)
 
-            return (returned)
-        @staticmethod
-        def output(string):
-            return null
-            
-            
+            return (returned)          
         @staticmethod
         def run_const(entry,letpos):
             k = letpos
@@ -245,6 +240,8 @@ def run():
                     lscount = lscount + 1
                 elif ( (')') in characters[x]):
                     count = count - 1
+                if(count==0 and (x!= (len(characters)-1 or 0))):
+                    raise Exception('The initial segment was incomplete: {}'.format(x)+' was the bracket count and {}'.format(characters[x])+' was encountered before the end of the formula.') 
                 if (characters[x] not in non_variables):
                     vcount = vcount+1
                     if(characters[x] not in variables_nm):
@@ -295,20 +292,20 @@ def run():
             
 
     # Checks to make sure the inputs are actual logical values
-    entry = WffTest.find_replace(current_formula)
-    ans = WffTest.setup(entry)
-    proven=False
-    letpos = ans[0]
-    count = ans[1]
-    proven = ans[2]
-    primarray = []
-    used = []
-    opar = []
-    ucount = 0
-    result = ""
-    print("")
-    print("  Contruction Sequence Of : " + entry)
     try:
+        entry = WffTest.find_replace(current_formula)
+        ans = WffTest.setup(entry)
+        proven=False
+        letpos = ans[0]
+        count = ans[1]
+        proven = ans[2]
+        primarray = []
+        used = []
+        opar = []
+        ucount = 0
+        result = ""
+        print("")
+        print("  Contruction Sequence Of : " + entry)
         if(count==0 and proven==True):
             result = WffTest.run_const(entry,letpos)
             #result[0] = the construction sequence of the array
@@ -361,7 +358,15 @@ def run():
             raise Exception('The lb / rb must be equal and wff tests should run the value of proven and count were: {}'.format(proven)+' and {}'.format(count)+' Left brackets more then Right Brackets')
         
     except Exception as e:
-          print(str(e))    
+          print(str(e))
+          key = input(" Enter R to Restart  >>")
+          if (key.lower()==("r")):
+              print("_" * 99)
+              print( 2*"\n")
+              run()
+          else:
+              pass
+          
 if (ran == False):
     print("      ___           ___           ___                                  ___           ___                   ")
     print("     /\  \         /\__\         /\__\                                /\__\         /\__\                  ")
@@ -384,6 +389,3 @@ if (key.lower()==("r")):
     run()
 else:
     pass
-    
-
-
