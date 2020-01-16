@@ -5,11 +5,11 @@ Upon reciving a properly structured well formed formula. The script will then co
 The three rules that the formula tests are as follows.
 
 #### Well Formed Formula Rules
-
+````
 `1. Every well formed formula is atomic (that is, an element of the core set) or starts with the left bracket symbol ‘(’.`
 `2. Equivelent number of left and right brackets in the formula.`
 `3. In every proper initial segment of a well formed formula, the number of left brackets ‘(’ is larger then right brackets `
-
+````
 
 ## Program 
 #### Info
