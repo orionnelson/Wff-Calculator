@@ -19,14 +19,18 @@ Turns a Properly constructed regex equation into a WFF Constuction Sequence and 
                     REQUIRES PYTHON 3 
 *****************************************************************
 ````
-The symbols used in this program will only work with python 3 and above you can download python 3 from the  
+The symbols used in this program will only work with Python 3 
+and above you can download Python from  
 [Python Download Page](https://www.python.org/downloads/)
 ````
 To understand how this program works consider the example : (pνqΛp). 
 
-The script does not know if you mean ((pνq)Λp) or (pν(qΛp)) and will probably just do both if exceptions are disabled or throw an exception as it is not in propper bracket notation WFF. 
+The script does not know if you mean ((pνq)Λp) or (pν(qΛp)) 
+and will probably just do both if exceptions are disabled or 
+throw an exception as it is not in propper bracket notation WFF. 
 
-Note Some textbooks use these types of functions and assume left to right progression for the same symbols most commonly (¬¬a).
+Note Some textbooks use these types of functions and assume 
+left to right progression for the same symbols most commonly (¬¬a).
 At this point in time this method is unsupported but may include in the future. 
 Instead please resort to (¬(¬a)).
  ````
@@ -34,18 +38,20 @@ Instead please resort to (¬(¬a)).
 The following symbols are used in the program to denote the functions of the adequate set (¬,Λ,ν, →)
 The formula will accept either the number or these symbols themselves.
 
-' 1 =  ¬ ' negation.
- '2 = Λ ' and.
- '3 = ν ' or.
- '4 = → ' implies.
+` 1 =  ¬ ` negation.
+ `2 = Λ ` and.
+ `3 = ν ` or.
+ `4 = → ` implies.
  
 ## Examples of formulas to try.
+````
 Examples of WFF:
 *(((pΛ((¬p)νq))Λ(s→r))Λ((¬s)→s))
 *((pνq)Λp)
 *((a4b)2((1a)4b))  ** Inputed in the num conversion formula. 
 *(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))) 
 **You may also replace any primitive variable with another well formed formula.
+````
 Here is a large one
 (((1((((pΛ((¬p)νq))Λ((((1(a3b))2((1c)2b))4((c4d)2((1a)4d)))→r))Λ((¬(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))))→(((1(a3b))2((1c)2b))4((c4d)2((1a)4d)))))3((pνq)Λp)))2((1c)2((pνq)Λp)))4((c4d)2((1(((pΛ((¬p)νq))Λ((((1(a3b))2((1c)2b))4((c4d)2((1a)4d)))→r))Λ((¬(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))))→(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))))))4d)))
 
