@@ -9,7 +9,7 @@ The three rules that the formula tests are as follows.
 `1. Every well formed formula is atomic (that is, an element of the core set)
 or starts with the left bracket symbol ‘(’.`
 
-`2. Equivelent number of left and right brackets in the formula.`
+`2. Equivalent number of left and right brackets in the formula.`
 
 `3. In every proper initial segment of a well formed formula, 
 the number of left brackets ‘(’ is larger then right brackets `
@@ -54,11 +54,7 @@ Examples of WFF:
 *((pνq)Λp)
 *((a4b)2((1a)4b))  ** Inputed in the num conversion formula. 
 *(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))) 
-**You may also replace any primitive variable with another well formed formula.
+**You may also replace any primitive variable with another well formed formula try using notepad for this
 ````
-Here is a large one
-(((1((((pΛ((¬p)νq))Λ((((1(a3b))2((1c)2b))4((c4d)2((1a)4d)))→r))Λ((¬(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))))→(((1(a3b))2((1c)2b))4((c4d)2((1a)4d)))))3((pνq)Λp)))2((1c)2((pνq)Λp)))4((c4d)2((1(((pΛ((¬p)νq))Λ((((1(a3b))2((1c)2b))4((c4d)2((1a)4d)))→r))Λ((¬(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))))→(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))))))4d)))
-
-Note At This Point the size of the equation is larger then the cmd or python shell window so it may look glitchy. 
 
 
