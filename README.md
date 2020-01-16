@@ -27,11 +27,17 @@ The symbols used in this program will only work with Python 3
 and above, you can download Python from  
 [Python Download Page](https://www.python.org/downloads/)
 ````
-To understand how this program works consider the example : (pνqΛp). 
+To understand how this program works consider the example : (p→qΛp). 
 
-The script does not know if you mean ((pνq)Λp) or (pν(qΛp)) 
-and will probably just do both if exceptions are disabled or 
-throw an exception as it is not in propper bracket notation WFF. 
+The script does not know if you mean ((p→q)Λp) or (p→(qΛp))
+As we know these have completly diffrent truth tables denoted 1 and 2.
+This problem stresses the importance of brackets.
+
+                    | 1 | 2 |
+                    | T | T |
+                    | F | F |
+                    | T | F |
+                    | T | F | 
 
 Note: Some textbooks use these types of functions and assume 
 left to right progression for the same symbols most commonly (¬¬a).
