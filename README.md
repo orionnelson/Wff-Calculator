@@ -59,7 +59,9 @@ Examples of WFF:
 *(((pΛ((¬p)νq))Λ(s→r))Λ((¬s)→s))
 *((pνq)Λp)
 *((a4b)2((1a)4b))  ** Inputed in the num conversion formula. 
-*(((1(a3b))2((1c)2b))4((c4d)2((1a)4d))) 
+These Last two would most likely take a person a while to compute.
+*((((¬(aνb))Λ((¬c)Λb))→((c→d)Λ((¬a)→d))) This is a tautology
+*(((pΛ((¬p)νq))Λ((¬((¬((¬(¬((¬a)Λ(¬b))))νc))ν(¬a)))→r))Λ((¬(¬((¬((¬(¬((¬a)Λ(¬b))))νc))ν(¬a))))→(¬((¬((¬(¬((¬a)Λ(¬b))))νc))ν(¬a))))) is satisfiable.
 **You may also replace any primitive variable with another well formed formula try using notepad for this
 ````
 
