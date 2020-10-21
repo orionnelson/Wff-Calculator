@@ -1,7 +1,7 @@
 import math
 ran = False
 def run():
-    print("Your List of Symbols is : \t\t\t Example ((p2q)4(1p))\n ¬[1]\n Λ[2]\n ν[3]\n →[4]")
+    print("Your List of Symbols is : \t\t\t Example ((p2q)4(1p))\n ¬[1] not\n Λ[2] and\n ν[3] or\n →[4] imp\n x[5] xor\n ↓[6] nor")
     print("")
     current_formula = input("Enter a formula using single char variables >>").strip()
     letter=""
@@ -55,6 +55,18 @@ def run():
                      trulist.append(ans)
                 thislist.append(trulist)     
                 return
+            def fxor(x,y,thislist,primarray):
+                for  m in range (1,len(thislist[0])):
+                     ans = ((thislist[x-1][m])^(thislist[y-1][m]))
+                     trulist.append(ans)
+                thislist.append(trulist)     
+                return
+            def fnor(x,y,thislist,primarray):
+                for  m in range (1,len(thislist[0])):
+                     ans = not(((thislist[x-1][m]) or (thislist[y-1][m])))
+                     trulist.append(ans)
+                thislist.append(trulist)     
+                return
                     
             for itera in range(l,len(primarray)):
                 trulist=[]
@@ -65,13 +77,17 @@ def run():
                     for item in (thislist[select[0]-1][1:]):
                         trulist.append( not item)
                     thislist.append(trulist)
-                elif(primarray[itera][0] in ('Λ','ν','→')):
+                elif(primarray[itera][0] in ('Λ','ν','→','x','↓')):
                     if(primarray[itera][0]==('Λ')):
                         fand((primarray[itera][2][0]),(primarray[itera][2][1]),thislist,primarray)
                     if(primarray[itera][0]==('ν')):
                         fuor((primarray[itera][2][0]),(primarray[itera][2][1]),thislist,primarray)
                     if(primarray[itera][0]==('→')):
                         fimp((primarray[itera][2][0]),(primarray[itera][2][1]),thislist,primarray)
+                    if(primarray[itera][0]==('x')):
+                        fxor((primarray[itera][2][0]),(primarray[itera][2][1]),thislist,primarray)
+                    if(primarray[itera][0]==('↓')):
+                        fnor((primarray[itera][2][0]),(primarray[itera][2][1]),thislist,primarray)
                 
                 
             #This part Computes to String and sets up boolean tables
@@ -98,7 +114,7 @@ def run():
             def split2(word): 
                 return [char for char in word]
             characters = split2(string)
-            symbol_array  = ['¬','Λ','ν','→']
+            symbol_array  = ['¬','Λ','ν','→','x','↓']
             list_size = []
             for x in range(1,len(symbol_array)+1):
                 list_size.append(str(x))
@@ -130,7 +146,7 @@ def run():
                         rarray.append(string)
                         add = " "*(space-dif)+ " is the base case variable."
                         sarray.append(add)
-                    elif(((('→') in string) or (('Λ') in string) or (('ν') in string)) and (len(string)>4)and string[1]!="¬"):
+                    elif(((('→') in string) or (('Λ') in string) or (('ν') in string)or (('x') in string) or (('↓') in string) ) and (len(string)>4)and string[1]!="¬"):
                         cstring = string
                         for x in range((len(rarray))-1,-1,-1):
                             if (rarray[x]) in string:
@@ -140,7 +156,7 @@ def run():
                                 s = string[pos:p]
                                 string = string.replace(s,(str(x+1)))
                         for l in string:
-                            if( l in ("Λ","→","ν")):
+                            if( l in ("Λ","→","ν","x","↓")):
                                 j = string.find(l)
                                 add= " "*(space-dif) + " O"+string[j]+" on " + string[1:j] + " and " + string[j+1:len(string)-1]
                                 sarray.append(add)
@@ -204,7 +220,7 @@ def run():
             for item in k.keys():
                 cc(item,0)    
             for x in range(0,len(entry)):
-              if(entry[x] in ('Λ','ν','→')):
+              if(entry[x] in ('Λ','ν','→','x','↓')):
                 res = str(search(entry,x,'-')) + str(entry[x])+ str(search(entry,x,'+'))
                 if res not in resu:
                     resu.append(res)
@@ -223,7 +239,7 @@ def run():
             return resultant            
         @staticmethod
         def setup(string):
-            non_variables = ['¬','Λ','ν','→','(',')']
+            non_variables = ['¬','Λ','ν','→','(',')','x','↓']
             variables = []
             variables_nm = []
             def split2(word): 
@@ -335,6 +351,13 @@ def run():
                     elif(a[1] in ('→')):
                         sel = a.replace("O→ on ","")
                         opar = sel.split(' and ')
+                    elif(a[1] in ('x')):
+                        sel = a.replace("Ox on ","")
+                        opar = sel.split(' and ')
+                    elif(a[1] in ('↓')):
+                        sel = a.replace("O↓ on ","")
+                        opar = sel.split(' and ')
+                        
                     for i in range(0, len(opar)):
                         opar[i] = int(opar[i])
                     primarray.append([a[1],False,opar])
@@ -389,3 +412,6 @@ if (key.lower()==("r")):
     run()
 else:
     pass
+    
+
+
