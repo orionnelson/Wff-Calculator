@@ -45,7 +45,7 @@ At this point in time this method is unsupported but may include in the future.
 Instead please resort to (¬(¬a)).
  ````
 ## Usage of the  Program
-The following symbols are used in the program to denote the functions of the adequate set (¬,Λ,ν, →)
+The following symbols are used in the program to denote the functions of the adequate set (¬,Λ,ν, →) and extended set (x,↓)
 The formula will accept either the number or these symbols themselves.
 ````
 ` 1 =  ¬ ` negation.
