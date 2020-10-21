@@ -52,6 +52,8 @@ The formula will accept either the number or these symbols themselves.
  `2 = Λ ` and.
  `3 = ν ` or.
  `4 = → ` implies.
+ `5 = x ` xor.
+ `6 = ↓ ` nor.
  ````
 ## Examples of formulas to try.
 ````
