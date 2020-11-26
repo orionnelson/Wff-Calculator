@@ -15,6 +15,8 @@ or starts with the left bracket symbol ‘(’.`
 the number of left brackets ‘(’ is larger then right brackets `
 ````
 
+Try The Flask Beta at http://or9.ca/wff/
+
 ## Program 
 #### Info
 Turns a Properly constructed regex equation into a WFF Constuction Sequence and Truth Table. 
